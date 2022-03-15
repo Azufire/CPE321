@@ -3,7 +3,7 @@ from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 from os import urandom
 
-#Task 1 Code
+#Task 2- Attack 1
 
 def main(): 
     p = 0xB10B8F96A080E01DDE92DE5EAE5D54EC52C99FBCFB06A3C69A6A9DCA52D23B616073E28675A23D189838EF1E2EE652C013ECB4AEA906112324975C3CD49B83BFACCBDD7D90C4BD7098488E9C219A73724EFFD6FAE5644738FAA31A4FF55BCCC0A151AF5F0DC8B4BD45BF37DF365C1A65E68CFDA76D4DA708DF1FB2BC2E4A4371
@@ -18,9 +18,14 @@ def main():
     x = pow(g, a) % p
     y = pow(g, b) % p
 
+    #Mallory swaps out the x and y values to p----------------------------
+    x = p
+    y = p
+
     a2 = pow(y,a) % p
     b2 = pow(x, b) % p
 
+    print("Mallory interception: a2=" + str(a2) + " | b2=" + str(b2))
     #print("encrypted keys (should be equal): " + str(a2) + ", " + str(b2)) 
     assert a2 == b2
 
