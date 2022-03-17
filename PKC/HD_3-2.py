@@ -1,9 +1,9 @@
 from Crypto.Util.number import getPrime #only used for generating big primes for keys
 import sys
 
-#Task 3 Part 1
+#Task 3 Part 2
 
-#https://www.tutorialspoint.com/cryptography_with_python/cryptography_with_python_creating_rsa_keys.htm
+#https://www.tutorialspoint.com/cryptography_with_python/cryptography_with_python_creating_rsa_keys.html
 def gcd(a, b):
    while a != 0:
       a, b = b % a, a
