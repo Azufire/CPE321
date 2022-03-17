@@ -3,7 +3,7 @@ import sys
 
 #Task 3 Part 1
 
-#https://www.tutorialspoint.com/cryptography_with_python/cryptography_with_python_creating_rsa_keys.htm
+#https://www.tutorialspoint.com/cryptography_with_python/cryptography_with_python_creating_rsa_keys.html
 def gcd(a, b):
    while a != 0:
       a, b = b % a, a
@@ -60,7 +60,7 @@ def main():
             print("Decoded:")
             print(decode(results, private_key))
         else:
-            print("usage: python HD_3-1.py [encode}decode|both] [msg]")
+            print("usage: python HD_3-1.py [encode}decode|both] [key length] [msg]")
 
 if __name__ == "__main__":
     main()
