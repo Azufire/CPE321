@@ -1,7 +1,5 @@
-import nltk
 from nltk.corpus import words
 import bcrypt
-import base64
 import time
 import sys
 
